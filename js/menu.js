@@ -1,4 +1,7 @@
 const hamburgerMenuButton = document.querySelector("#hamburger-menu-button");
+const hamburgerMenuCloseButton = document.querySelector(
+  "#hamburger-menu-close-button"
+);
 const mobileMenu = document.querySelector("#mobile-menu");
 const mobileMenuOverlay = document.querySelector("#mobile-menu-overlay");
 
@@ -26,6 +29,11 @@ window.visualViewport.addEventListener("resize", () => {
 hamburgerMenuButton.addEventListener("click", () => {
   mobileMenu.classList.toggle("-translate-x-full");
   mobileMenuOverlay.classList.toggle("hidden");
+});
+
+hamburgerMenuCloseButton.addEventListener("click", () => {
+  mobileMenu.classList.add("-translate-x-full");
+  mobileMenuOverlay.classList.add("hidden");
 });
 
 mobileMenuOverlay.addEventListener("click", () => {
