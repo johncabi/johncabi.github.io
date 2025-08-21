@@ -21,13 +21,36 @@
   <body class="bg-gray-50">
     <div
       id="header"
-      class="bg-white flex fixed items-center justify-between left-0 px-3 py-4 right-0 shadow top-0 z"
+      class="bg-white flex fixed items-center justify-evenly left-0 max-md:justify-between px-3 py-4 right-0 shadow top-0 z-2"
     >
       <h3 class="font-semibold">Portfolio</h3>
 
-      <button><i class="bi bi-list min-md:hidden text-2xl"></i></button>
+      <!-- mobile hamburger button -->
+      <button id="hamburger-menu-button" class="hidden lg:hidden max-md:block">
+        <i class="bi bi-list text-2xl"></i>
+      </button>
 
-      <div id="nav" class="max-md:hidden">
+      <!-- mobile sidebar menu -->
+      <div
+        id="mobile-menu"
+        class="bg-white fixed h-full left-0 shadow-lg top-0 transform -translate-x-full z-4 w-64"
+      >
+        <ul class="flex flex-col gap-4 p-6">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- mobile menu overlay -->
+      <div
+        id="mobile-menu-overlay"
+        class="bg-black/60 fixed hidden inset-0 z-3"
+      ></div>
+
+      <!-- desktop menu -->
+      <div id="desktop-menu" class="max-md:hidden">
         <ul class="flex gap-3">
           <li>
             <a href="#about" class="cursor-pointer hover:underline">About</a>
@@ -49,4 +72,5 @@
       </div>
     </div>
   </body>
+  <script src="js/script.js"></script>
 </html>
