@@ -9,7 +9,7 @@ if (window.visualViewport) {
 window.visualViewport.addEventListener("resize", () => {
     const w = window.visualViewport.width;
     if (w >= 768) {
-        wasOpen = !mobileMenu.classList.contains("translate-x-full");
+        wasOpen = !mobileMenu.classList.contains("-translate-x-full");
         mobileMenu.classList.add("-translate-x-full");
         mobileMenuOverlay.classList.add("hidden");
     }
