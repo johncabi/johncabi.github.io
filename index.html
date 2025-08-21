@@ -18,7 +18,7 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
-  <body class="bg-gray-50">
+  <body class="bg-gray-50 flex flex-col items-center overflow-y-scroll">
     <div
       id="header"
       class="bg-white flex fixed items-center justify-evenly left-0 max-md:justify-between px-3 py-4 right-0 shadow top-0 z-2"
@@ -35,7 +35,10 @@
         id="mobile-menu"
         class="bg-white fixed h-full left-0 shadow-lg top-0 transform -translate-x-full z-4 w-64"
       >
-        <ul class="flex flex-col gap-4 p-6">
+        <button id="hamburger-menu-close-button" class="absolute right-4 top-4">
+          <i class="bi bi-x-lg text-xl"></i>
+        </button>
+        <ul class="flex flex-col gap-4 mt-8 p-6">
           <li><a href="#about">About</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#skills">Skills</a></li>
@@ -70,6 +73,45 @@
           </li>
         </ul>
       </div>
+    </div>
+    <div
+      id="hero"
+      class="border border-gray-200 flex flex-wrap gap-4 h-auto items-center justify-center mt-80 max-md:h-auto max-md:mt-22 max-md:p-2 max-md:w-auto p-0 rounded-sm shadow-md"
+    >
+      <div id="name" class="ml-7">
+        <h3 class="font-medium text-3xl max-md:text-lg">Hey, visitor!</h3>
+        <h5 class="font-semibold text-xl max-md:text-md">
+          I'm John Lloyd Cabiling
+        </h5>
+        <h6 class="text-md max-md:text-sm">Backend Web Developer</h6>
+        <q class="text-md max-md:text-sm"
+          >Quietly building the foundation the world clicks on</q
+        >
+        <div id="accounts" class="flex gap-3 mt-3 text-xl">
+          <a href="https://github.com/johncabi" target="_blank" title="Github"
+            ><i class="bi bi-github"></i
+          ></a>
+          <a
+            href="https://www.facebook.com/profile.php?id=61579631332145"
+            target="_blank"
+            title="Facebook"
+            class="hover:text-[#1877f2]"
+            ><i class="bi bi-facebook"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/johncabi-in/"
+            target="_blank"
+            title="LinkedIn"
+            class="hover:text-[#0077b5]"
+            ><i class="bi bi-linkedin"></i
+          ></a>
+        </div>
+      </div>
+      <img
+        src="assets/images/profile_pic/me.webp"
+        alt=""
+        class="w-64 max-md:w-auto rounded-br-sm rounded-tr-sm"
+      />
     </div>
   </body>
   <script src="js/menu.js"></script>
