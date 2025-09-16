@@ -1,214 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Backend Web Developer Portfolio" />
-    <title>johncabi | Backend Web Developer | Portfolio</title>
-    <link rel="stylesheet" href="/css/font-cnf.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  </head>
-  <body class="bg-gray-50 flex flex-col items-center overflow-y-scroll">
-    <div
-      id="header"
-      class="bg-white flex fixed gap-3 items-center justify-between left-0 max-md:justify-start px-3 py-4 right-0 shadow top-0 z-2"
-    >
-      <!-- mobile hamburger button -->
-      <button id="hamburger-menu-button" class="hidden lg:hidden max-md:block">
-        <i class="bi bi-list text-2xl"></i>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Backend Web Developer Portfolio" />
+  <title>johncabi | Backend Web Developer | Portfolio</title>
+  <link rel="stylesheet" href="css/font-cnf.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="css/custom.css" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-gray-50 flex flex-col items-center overflow-y-scroll">
+  <div id="header"
+    class="bg-white flex fixed gap-3 items-center justify-between left-0 max-md:justify-start px-3 py-4 right-0 shadow top-0 z-2">
+    <!-- mobile hamburger button -->
+    <button id="hamburger-menu-button" class="hidden lg:hidden max-md:block">
+      <i class="bi bi-list text-2xl"></i>
+    </button>
+
+    <h3 class="font-semibold">Portfolio</h3>
+
+    <!-- mobile sidebar menu -->
+    <div id="mobile-menu" class="bg-white fixed h-full left-0 shadow-lg top-0 transform -translate-x-full z-4 w-64">
+      <button id="hamburger-menu-close-button" class="absolute right-4 top-4">
+        <i class="bi bi-x-lg text-xl"></i>
       </button>
-
-      <h3 class="font-semibold">Portfolio</h3>
-
-      <!-- mobile sidebar menu -->
-      <div
-        id="mobile-menu"
-        class="bg-white fixed h-full left-0 shadow-lg top-0 transform -translate-x-full z-4 w-64"
-      >
-        <button id="hamburger-menu-close-button" class="absolute right-4 top-4">
-          <i class="bi bi-x-lg text-xl"></i>
-        </button>
-        <ul class="flex flex-col gap-4 mt-8 p-6">
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-
-      <!-- mobile menu overlay -->
-      <div
-        id="mobile-menu-overlay"
-        class="bg-black/60 fixed hidden inset-0 z-3"
-      ></div>
-
-      <!-- desktop menu -->
-      <div id="desktop-menu" class="max-md:hidden">
-        <ul class="flex gap-3">
-          <li>
-            <a href="#about" class="cursor-pointer hover:underline">About</a>
-          </li>
-          <li>
-            <a href="#projects" class="cursor-pointer hover:underline"
-              >Projects</a
-            >
-          </li>
-          <li>
-            <a href="#skills" class="cursor-pointer hover:underline">Skills</a>
-          </li>
-          <li>
-            <a href="#contact" class="cursor-pointer hover:underline"
-              >Contact</a
-            >
-          </li>
-        </ul>
-      </div>
+      <ul class="flex flex-col gap-4 mt-8 p-6">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </div>
-    <div id="main" class="flex flex-col items-center gap-10 pt-20 w-full">
-      <div
-        id="hero"
-        class="bg-white border border-gray-200 flex flex-wrap gap-4 h-auto items-center justify-center max-md:p-4 rounded-sm w-full"
-      >
-        <div id="name">
-          <h4 class="font-medium text-2xl max-md:text-lg">Hey, Visitor!</h4>
-          <h3 class="font-semibold text-3xl max-md:text-md">
-            I'm John Lloyd Cabiling
-          </h3>
-          <h5 class="font-semibold text-xl max-md:text-sm">
-            Backend Web Developer
+
+    <!-- mobile menu overlay -->
+    <div id="mobile-menu-overlay" class="bg-black/60 fixed hidden inset-0 z-3"></div>
+
+    <!-- desktop menu -->
+    <div id="desktop-menu" class="max-md:hidden">
+      <ul class="flex gap-3">
+        <li>
+          <a href="#about" class="cursor-pointer hover:underline">About</a>
+        </li>
+        <li>
+          <a href="#projects" class="cursor-pointer hover:underline">Projects</a>
+        </li>
+        <li>
+          <a href="#skills" class="cursor-pointer hover:underline">Skills</a>
+        </li>
+        <li>
+          <a href="#contact" class="cursor-pointer hover:underline">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div id="main" class="flex flex-col items-center gap-10 pt-20 w-full">
+    <div id="hero"
+      class="bg-white border border-gray-200 flex flex-wrap gap-4 h-auto items-center justify-center max-md:p-4 rounded-sm w-full">
+      <div id="name">
+        <h4 class="font-medium text-2xl max-md:text-lg">Hey, Visitor!</h4>
+        <h3 class="font-semibold text-3xl max-md:text-md">
+          I'm John Lloyd Cabiling
+        </h3>
+        <h5 class="font-semibold text-xl max-md:text-sm">
+          Backend Web Developer
+        </h5>
+        <q class="text-md max-md:text-sm">Quietly building the foundation the world clicks on.</q>
+        <div id="accounts" class="flex gap-3 mt-3 text-xl">
+          <a href="https://github.com/johncabi" target="_blank" title="Github"><i class="bi bi-github"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=61579631332145" target="_blank" title="Facebook"
+            class="hover:text-[#1877f2]"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.linkedin.com/in/johncabi-in/" target="_blank" title="LinkedIn"
+            class="hover:text-[#0077b5]"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+      <img src="assets/images/profile_pic/me.webp" alt="" class="w-64 max-md:w-auto" />
+    </div>
+    <div id="about"
+      class="bg-white border border-gray-200 flex flex-col gap-2 items-start justify-center p-6 shadow w-full">
+      <h4 id="about-heading" class="font-semibold text-2xl">About Me</h4>
+      <p>
+        Hi, I'm John Lloyd Cabiling, a Backend Web Developer with strong
+        experience in Flask, MySQL, and RESTful API development. I specialize
+        in building scalable and efficient server-side applications, designing
+        secure database schemas, and creating well-structured APIs that
+        integrate seamlessly with front-end systems and third-party services.
+        I enjoy solving complex backend challenges, optimizing database
+        queries for performance, and implementing authentication and
+        authorization mechanisms to ensure secure applications. With a keen
+        eye for clean code and best practices, I aim to deliver maintainable
+        and production-ready solutions.
+      </p>
+    </div>
+    <div id="projects" class="bg-white border border-gray-200 flex flex-col gap-6 items-start p-6 shadow w-full">
+      <h4 id="projects-heading" class="font-semibold text-2xl">Projects</h4>
+      <div id="projects-container" class="flex flex-col gap-3">
+        <div id="project-image-and-heading" class="flex gap-3 items-center">
+          <img src="assets/images/projects/print_n_go/logo/print_-_n_-_go_classic_logo.jpg" alt="print-n-go logo"
+            class="w-12" />
+          <h5 class="font-medium text-xl">Print 'N Go</h5>
+        </div>
+        <div id="project-desc">
+          <p>
+            A self-service print vending system powered by a
+            <strong>Raspberry Pi</strong> and
+            <strong>Arduino&trade; Nano</strong>, designed to provide fast and
+            convenient printing for students and professionals. The machine
+            supports <strong>Wi-Fi</strong> file transfer and
+            <strong>USB flash drive uploads</strong>, with a coin-based
+            payment system for accessibility in public spaces like schools,
+            libraries, and cafes.
+          </p>
+        </div>
+        <div id="tech-stack">
+          <h5 id="teck-stack-heading" class="font-medium text-lg">
+            Tech Stack
           </h5>
-          <q class="text-md max-md:text-sm"
-            >Quietly building the foundation the world clicks on.</q
-          >
-          <div id="accounts" class="flex gap-3 mt-3 text-xl">
-            <a href="https://github.com/johncabi" target="_blank" title="Github"
-              ><i class="bi bi-github"></i
-            ></a>
-            <a
-              href="https://www.facebook.com/profile.php?id=61579631332145"
-              target="_blank"
-              title="Facebook"
-              class="hover:text-[#1877f2]"
-              ><i class="bi bi-facebook"></i
-            ></a>
-            <a
-              href="https://www.linkedin.com/in/johncabi-in/"
-              target="_blank"
-              title="LinkedIn"
-              class="hover:text-[#0077b5]"
-              ><i class="bi bi-linkedin"></i
-            ></a>
-          </div>
-        </div>
-        <img
-          src="assets/images/profile_pic/me.webp"
-          alt=""
-          class="w-64 max-md:w-auto"
-        />
-      </div>
-      <div
-        id="about"
-        class="bg-white border border-gray-200 flex flex-col gap-2 items-start justify-center p-6 shadow w-full"
-      >
-        <h4 id="about-heading" class="font-semibold text-2xl">About Me</h4>
-        <p>
-          Hi, I'm John Lloyd Cabiling, a Backend Web Developer with strong
-          experience in Flask, MySQL, and RESTful API development. I specialize
-          in building scalable and efficient server-side applications, designing
-          secure database schemas, and creating well-structured APIs that
-          integrate seamlessly with front-end systems and third-party services.
-          I enjoy solving complex backend challenges, optimizing database
-          queries for performance, and implementing authentication and
-          authorization mechanisms to ensure secure applications. With a keen
-          eye for clean code and best practices, I aim to deliver maintainable
-          and production-ready solutions.
-        </p>
-      </div>
-      <div
-        id="projects"
-        class="bg-white border border-gray-200 flex flex-col gap-6 items-start p-6 shadow w-full"
-      >
-        <h4 id="projects-heading" class="font-semibold text-2xl">Projects</h4>
-        <div id="projects-container" class="flex flex-col gap-3">
-          <div id="project-image-and-heading" class="flex gap-3 items-center">
-            <img
-              src="assets/images/projects/print_n_go/logo/print_-_n_-_go_classic_logo.jpg"
-              alt="print-n-go logo"
-              class="w-12"
-            />
-            <h5 class="font-medium text-xl">Print 'N Go</h5>
-          </div>
-          <div id="project-desc">
-            <p>
-              A self-service print vending system powered by a
-              <strong>Raspberry Pi</strong> and
-              <strong>Arduino&trade; Nano</strong>, designed to provide fast and
-              convenient printing for students and professionals. The machine
-              supports <strong>Wi-Fi</strong> file transfer and
-              <strong>USB flash drive uploads</strong>, with a coin-based
-              payment system for accessibility in public spaces like schools,
-              libraries, and cafes.
-            </p>
-          </div>
-          <div id="tech-stack">
-            <h5 id="teck-stack-heading" class="font-medium text-lg">
-              Tech Stack
-            </h5>
-            <ul id="tech-stack-list" class="list-disc">
-              <li>
-                <strong>Hardware</strong>: Raspberry Pi 4 Model B 2GiB,
-                Arduino&trade; Nano (Coin Acceptor reader).
-              </li>
-              <li>
-                <strong>Backend</strong>: Flask (Python web framework), MariaDB.
-              </li>
-              <li><strong>Frontend</strong>: HTML, CSS and JS.</li>
-              <li>
-                <strong>Additional</strong>: Apache HTTP server for reverse
-                proxy.
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div id="feat">
-          <h5 id="feat-heading" class="font-medium text-lg">Features</h5>
           <ul id="tech-stack-list" class="list-disc">
             <li>
-              Upload documents via <strong>WiFi</strong> or
-              <strong>USB</strong> flash drive.
+              <strong>Hardware</strong>: Raspberry Pi 4 Model B 2GiB,
+              Arduino&trade; Nano (Coin Acceptor reader).
             </li>
             <li>
-              <strong>Coin-based automated payment system</strong> integrated
-              with Arduino&trade; Nano.
+              <strong>Backend</strong>: Flask (Python web framework), MariaDB.
             </li>
-            <li>Secure file handling with MariaDB backend.</li>
+            <li><strong>Frontend</strong>: HTML, CSS and JS.</li>
             <li>
-              Lightweight Flask web server with integration of Apache HTTP
-              server for reverse proxy.
+              <strong>Additional</strong>: Apache HTTP server for reverse
+              proxy.
             </li>
-            <li>User-friendly web UI for seamless interaction.</li>
           </ul>
         </div>
-        <div id="screenshot">
-          <div id="h6" class="font-medium text-xl">Screenshot:</div>
-          <img
-            src="assets/images/projects/print_n_go/screenshots/print_-_n_-_go_intro_screen.jpg"
-            alt="print-n-go intro screen"
-          />
-        </div>
+      </div>
+      <div id="feat">
+        <h5 id="feat-heading" class="font-medium text-lg">Features</h5>
+        <ul id="tech-stack-list" class="list-disc">
+          <li>
+            Upload documents via <strong>WiFi</strong> or
+            <strong>USB</strong> flash drive.
+          </li>
+          <li>
+            <strong>Coin-based automated payment system</strong> integrated
+            with Arduino&trade; Nano.
+          </li>
+          <li>Secure file handling with MariaDB backend.</li>
+          <li>
+            Lightweight Flask web server with integration of Apache HTTP
+            server for reverse proxy.
+          </li>
+          <li>User-friendly web UI for seamless interaction.</li>
+        </ul>
+      </div>
+      <div id="screenshot">
+        <div id="h6" class="font-medium text-xl">Screenshot:</div>
+        <img src="assets/images/projects/print_n_go/screenshots/print_-_n_-_go_intro_screen.jpg"
+          alt="print-n-go intro screen" />
       </div>
     </div>
-  </body>
-  <script src="js/menu.js"></script>
+  </div>
+</body>
+<script src="js/menu.js"></script>
+
 </html>
