@@ -22,7 +22,6 @@
     --color-zinc-700: oklch(37% 0.013 285.805);
     --color-zinc-800: oklch(27.4% 0.006 286.033);
     --color-zinc-900: oklch(21% 0.006 285.885);
-    --color-zinc-950: oklch(14.1% 0.005 285.823);
     --color-stone-100: oklch(97% 0.001 106.424);
     --color-stone-800: oklch(26.8% 0.007 34.298);
     --spacing: 0.25rem;
@@ -38,8 +37,6 @@
     --text-lg--line-height: calc(1.75 / 1.125);
     --text-xl: 1.25rem;
     --text-xl--line-height: calc(1.75 / 1.25);
-    --text-2xl: 1.5rem;
-    --text-2xl--line-height: calc(2 / 1.5);
     --text-3xl: 1.875rem;
     --text-3xl--line-height: calc(2.25 / 1.875);
     --text-4xl: 2.25rem;
@@ -200,41 +197,17 @@
   }
 }
 @layer utilities {
-  .m-4 {
-    margin: calc(var(--spacing) * 4);
-  }
   .mx-auto {
     margin-inline: auto;
-  }
-  .ml-4 {
-    margin-left: calc(var(--spacing) * 4);
-  }
-  .ml-8 {
-    margin-left: calc(var(--spacing) * 8);
   }
   .flex {
     display: flex;
   }
-  .table {
-    display: table;
-  }
-  .max-w-2xl {
-    max-width: var(--container-2xl);
-  }
-  .max-w-3xl {
-    max-width: var(--container-3xl);
-  }
   .max-w-4xl {
     max-width: var(--container-4xl);
   }
-  .max-w-xl {
-    max-width: var(--container-xl);
-  }
   .table-fixed {
     table-layout: fixed;
-  }
-  .border-collapse {
-    border-collapse: collapse;
   }
   .flex-col {
     flex-direction: column;
@@ -248,45 +221,18 @@
   .gap-4 {
     gap: calc(var(--spacing) * 4);
   }
-  .gap-6 {
-    gap: calc(var(--spacing) * 6);
-  }
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
-  .border-zinc-300 {
-    border-color: var(--color-zinc-300);
-  }
   .border-zinc-500 {
     border-color: var(--color-zinc-500);
-  }
-  .bg-green-400 {
-    background-color: var(--color-green-400);
-  }
-  .bg-green-500 {
-    background-color: var(--color-green-500);
-  }
-  .p-2 {
-    padding: calc(var(--spacing) * 2);
   }
   .p-4 {
     padding: calc(var(--spacing) * 4);
   }
-  .p-8 {
-    padding: calc(var(--spacing) * 8);
-  }
-  .py-2 {
-    padding-block: calc(var(--spacing) * 2);
-  }
   .pt-4 {
     padding-top: calc(var(--spacing) * 4);
-  }
-  .pl-2 {
-    padding-left: calc(var(--spacing) * 2);
-  }
-  .pl-4 {
-    padding-left: calc(var(--spacing) * 4);
   }
   .pl-8 {
     padding-left: calc(var(--spacing) * 8);
@@ -297,18 +243,6 @@
   .font-mono {
     font-family: var(--font-mono);
   }
-  .text-3xl {
-    font-size: var(--text-3xl);
-    line-height: var(--tw-leading, var(--text-3xl--line-height));
-  }
-  .text-4xl {
-    font-size: var(--text-4xl);
-    line-height: var(--tw-leading, var(--text-4xl--line-height));
-  }
-  .text-6xl {
-    font-size: var(--text-6xl);
-    line-height: var(--tw-leading, var(--text-6xl--line-height));
-  }
   .text-lg {
     font-size: var(--text-lg);
     line-height: var(--tw-leading, var(--text-lg--line-height));
@@ -317,77 +251,15 @@
     font-size: var(--text-sm);
     line-height: var(--tw-leading, var(--text-sm--line-height));
   }
-  .text-xl {
-    font-size: var(--text-xl);
-    line-height: var(--tw-leading, var(--text-xl--line-height));
-  }
   .text-xs {
     font-size: var(--text-xs);
     line-height: var(--tw-leading, var(--text-xs--line-height));
   }
-  .font-bold {
-    --tw-font-weight: var(--font-weight-bold);
-    font-weight: var(--font-weight-bold);
-  }
   .text-blue-500 {
     color: var(--color-blue-500);
   }
-  .text-fuchsia-50 {
-    color: var(--color-fuchsia-50);
-  }
-  .text-green-300 {
-    color: var(--color-green-300);
-  }
-  .text-sky-400 {
-    color: var(--color-sky-400);
-  }
-  .text-zinc-100 {
-    color: var(--color-zinc-100);
-  }
-  .text-zinc-200 {
-    color: var(--color-zinc-200);
-  }
-  .text-zinc-300 {
-    color: var(--color-zinc-300);
-  }
-  .text-zinc-400 {
-    color: var(--color-zinc-400);
-  }
   .underline {
     text-decoration-line: underline;
-  }
-  .scheme-dark {
-    color-scheme: dark;
-  }
-  .dark\:bg-zinc-100 {
-    &:where(.dark, .dark *) {
-      background-color: var(--color-zinc-100);
-    }
-  }
-  .dark\:bg-zinc-400 {
-    &:where(.dark, .dark *) {
-      background-color: var(--color-zinc-400);
-    }
-  }
-  .dark\:bg-zinc-500 {
-    &:where(.dark, .dark *) {
-      background-color: var(--color-zinc-500);
-    }
-  }
-  .dark\:bg-zinc-600 {
-    &:where(.dark, .dark *) {
-      background-color: var(--color-zinc-600);
-    }
-  }
-  .dark\:bg-zinc-700 {
-    &:where(.dark, .dark *) {
-      background-color: var(--color-zinc-700);
-    }
-  }
-  .dark\:bg-zinc-800 {
-    &:where(.dark, .dark *) {
-      background-color: var(--color-zinc-800);
-    }
   }
   .dark\:bg-zinc-900 {
     &:where(.dark, .dark *) {
@@ -399,29 +271,13 @@
       color: var(--color-green-300);
     }
   }
-  .dark\:text-zinc-200 {
-    &:where(.dark, .dark *) {
-      color: var(--color-zinc-200);
-    }
-  }
   .dark\:text-zinc-300 {
     &:where(.dark, .dark *) {
       color: var(--color-zinc-300);
     }
   }
-  .dark\:text-zinc-400 {
-    &:where(.dark, .dark *) {
-      color: var(--color-zinc-400);
-    }
-  }
-  .dark\:text-zinc-500 {
-    &:where(.dark, .dark *) {
-      color: var(--color-zinc-500);
-    }
-  }
 }
 :root {
-  --font-sans: "Inter";
   --font-mono: "Fira Mono";
 }
 .background {
@@ -435,15 +291,10 @@
   inherits: false;
   initial-value: solid;
 }
-@property --tw-font-weight {
-  syntax: "*";
-  inherits: false;
-}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
       --tw-border-style: solid;
-      --tw-font-weight: initial;
     }
   }
 }
